@@ -4,6 +4,21 @@ import VueRouter from 'vue-router'
 // 路由懒加载
 const Login = () => import('content/Login')
 const Home = () => import('views/home/Home.vue')
+const Welcome = () => import('views/home/Welcome.vue')
+
+const Users = () => import('views/user/Users.vue')
+
+const Roles = () => import('views/rights/Roles.vue')
+const Rights = () => import('views/rights/Rights.vue')
+
+const Goods = () => import('views/goods/Goods.vue')
+const Params = () => import('views/goods/Params.vue')
+const Categories = () => import('views/goods/Categories.vue')
+
+const Orders = () => import('views/orders/Orders')
+
+const Reports = () => import('views/reports/Reports')
+
 
 Vue.use(VueRouter)
 
@@ -18,7 +33,46 @@ const routes = [
   },
   {
     path:'/home',
-    component: Home
+    component: Home,
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        component: Users
+      },
+      {
+        path: '/roles',
+        component: Roles
+      },
+      {
+        path: '/rights',
+        component: Rights
+      },
+      {
+        path: '/goods',
+        component: Goods
+      },
+      {
+        path: '/params',
+        component: Params
+      },
+      {
+        path: '/categories',
+        component: Categories
+      },
+      {
+        path: '/orders',
+        component: Orders
+      },
+      {
+        path: '/reports',
+        component: Reports
+      }
+    ]
   }
 ]
 
