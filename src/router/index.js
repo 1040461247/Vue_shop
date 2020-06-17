@@ -8,8 +8,8 @@ const Welcome = () => import('views/home/Welcome.vue')
 
 const Users = () => import('views/user/Users.vue')
 
-const Roles = () => import('views/rights/Roles.vue')
-const Rights = () => import('views/rights/Rights.vue')
+const Roles = () => import('views/rights/roles/Roles.vue')
+const Rights = () => import('views/rights/rights/Rights.vue')
 
 const Goods = () => import('views/goods/Goods.vue')
 const Params = () => import('views/goods/Params.vue')

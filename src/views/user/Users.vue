@@ -52,7 +52,7 @@
               <el-button type="danger" icon="el-icon-delete" size="mini" @click="deleteUser(scope.row)"></el-button>
             </el-tooltip>
             <el-tooltip effect="dark" content="分配角色" placement="top" :enterable="false">
-              <el-button type="warning" icon="el-icon-setting" size="mini"></el-button>
+              <el-button type="warning" icon="el-icon-setting" size="mini" @click="setRoles(scope.row)"></el-button>
             </el-tooltip>
           </template>
         </el-table-column>
@@ -113,6 +113,31 @@
       </span>
     </el-dialog>
 
+    <!-- 分配角色对话框 -->
+    <el-dialog title="分配角色" :visible.sync="showSetDialog" width="50%" ref="setDialogRef" @close="closeDialog">
+      <el-form :model="setRowUserInfo" ref="setUserRef" label-width="100px">
+        <div id="textInfo">
+          <p>当前的用户： {{setRowUserInfo.username}}</p>
+          <p>当前的角色： {{setRowUserInfo.role_name}}</p>
+          <p>分配新角色：
+            <el-select v-model="selectRoleId" placeholder="请选择">
+              <el-option
+                v-for="item in rolesList"
+                :key="item.id"
+                :label="item.roleName"
+                :value="item.id">
+              </el-option>
+            </el-select>
+          </p>
+        </div>
+      </el-form>
+      <!-- 底部按钮 -->
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="selectRoles(0)">取 消</el-button>
+        <el-button type="primary" @click="selectRoles(1)">确 定</el-button>
+      </span>
+    </el-dialog>
+
   </div>
 </template>
 
@@ -126,7 +151,9 @@ import {
   postUsers,
   getUserInfo,
   putUserInfo,
-  deleteUser
+  deleteUser,
+  getRoles,
+  setRights
 } from "network/Home.js";
 
 export default {
@@ -201,7 +228,11 @@ export default {
         ]
       },
       showPutDialog: false,
-      showDeleteDialog: false
+      showDeleteDialog: false,
+      showSetDialog: false,
+      setRowUserInfo: {},
+      rolesList: [],
+      selectRoleId: null
     };
   },
   methods: {
@@ -289,6 +320,10 @@ export default {
     closeDialog() {
       if (this.$refs.addUserRef) return this.$refs.addUserRef.resetFields();
       if (this.$refs.putUserRef) return this.$refs.putUserRef.resetFields();
+      if (this.$refs.setDialogRef) {
+        this.selectRoleId = '',
+        this.setRowUserInfo = {}
+      }
     },
     // 修改用户信息
     putUserInfo(msg) {
@@ -317,6 +352,38 @@ export default {
           }
         })
       }).catch(() => console.log('取消了删除'))
+    },
+    // 分配角色
+    setRoles(rowInfo) {
+      // 在展示对话框之前获取所有角色列表
+      getRoles().then(res => {
+        if(res.meta.status === 200) {
+          this.rolesList = res.data
+        }else {
+          return this.$message.error(res.meta.msg)
+        }
+      })
+      // 展示对话框
+      this.showSetDialog = !this.showSetDialog
+      this.setRowUserInfo = rowInfo
+    },
+    // 确定分配的角色
+    selectRoles(num) {
+      if(num == 1) {
+        if(!this.selectRoleId)
+          return this.$message.error('请选择要分配的角色！')
+        setRights(this.setRowUserInfo.id, this.selectRoleId).then(res => {
+          if(res.meta.status === 200) {
+            this.$message.success('角色分配成功！')
+            this.showSetDialog = !this.showSetDialog
+            this._getUsers()
+          }else {
+            return this.$message.error(res.meta.msg)
+          }
+        })
+      }else {
+        return this.showSetDialog = !this.showSetDialog
+      }
     }
   },
   created() {
@@ -334,5 +401,8 @@ export default {
 }
 .el-pagination {
   margin: 20px;
+}
+#textInfo {
+  margin-left: 18px;
 }
 </style>

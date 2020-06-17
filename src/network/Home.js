@@ -70,3 +70,22 @@ export function deleteUser(id) {
     method: 'delete'
   })
 }
+
+// 请求角色列表数据
+export function getRoles() {
+  return request({
+    url: 'roles',
+    method: 'get'
+  })
+}
+
+// 分配用户角色
+export function setRights(id, rid) {
+  return request({
+    url: 'users/' + id + '/role',
+    method: 'put',
+    data: {
+      rid
+    }
+  })
+}
