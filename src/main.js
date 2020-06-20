@@ -8,10 +8,15 @@ import './plugins/element.js'
 import './assets/css/global.css'
 // 导入字体图标
 import 'assets/fonts/iconfont.css'
+// 导入treeTable组件
+import TreeTable from 'vue-table-with-tree-grid'
 
 Vue.config.productionTip = false
 // 事件总线
 Vue.prototype.$bus = new Vue()
+// 注册 全局组件
+Vue.component('tree-table', TreeTable)
+
 
 new Vue({
   router,

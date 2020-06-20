@@ -5,3 +5,5 @@ html, body, #app{
   padding: 0;
   min-width: 1366px;
 }
+/* 解决Cascader高度问题 */
+.el-cascader-menu { height: 300px; }

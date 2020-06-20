@@ -11,9 +11,9 @@ const Users = () => import('views/user/Users.vue')
 const Roles = () => import('views/rights/roles/Roles.vue')
 const Rights = () => import('views/rights/rights/Rights.vue')
 
-const Goods = () => import('views/goods/Goods.vue')
-const Params = () => import('views/goods/Params.vue')
-const Categories = () => import('views/goods/Categories.vue')
+const Goods = () => import('views/goods/goods/Goods.vue')
+const Params = () => import('views/goods/params/Params.vue')
+const Categories = () => import('views/goods/categories/Categories.vue')
 
 const Orders = () => import('views/orders/Orders')
 
