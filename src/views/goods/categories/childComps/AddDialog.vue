@@ -90,7 +90,7 @@ export default {
       this.$refs.addFormRef.validate(valid => {
         if(valid) {
           addCategory(this.addData).then(res => {
-            if(res.meta.status === 201) {
+            if(res.meta.status === 201) { 
               this.$emit('updateData')
               this.$message.success('添加成功！')
               this.showDialog = !this.showDialog
