@@ -14,10 +14,13 @@ const Rights = () => import('views/rights/rights/Rights.vue')
 const Goods = () => import('views/goods/goods/Goods.vue')
 const Params = () => import('views/goods/params/Params.vue')
 const Categories = () => import('views/goods/categories/Categories.vue')
+const GoodsAdd = () => import('views/goods/goods/AddGoods')
 
 const Orders = () => import('views/orders/Orders')
 
 const Reports = () => import('views/reports/Reports')
+
+const Basic = () => import('views/goods/goods/AddGoodsComps/BasicInfo')
 
 
 Vue.use(VueRouter)
@@ -41,7 +44,7 @@ const routes = [
         component: Welcome
       },
       {
-        path: '/users',
+        path: '/users', 
         component: Users
       },
       {
@@ -71,6 +74,10 @@ const routes = [
       {
         path: '/reports',
         component: Reports
+      },
+      {
+        path: '/goods/add',
+        component: GoodsAdd
       }
     ]
   }

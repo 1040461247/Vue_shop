@@ -6,7 +6,8 @@
     :page-sizes="[4, 6, 8, 10]"
     :page-size="catRequestPramas.pagesize"
     layout="total, sizes, prev, pager, next, jumper"
-    :total="categoryData.total">
+    :total="categoryData.total"
+    :background="background">
   </el-pagination>
 </template>
 
@@ -30,6 +31,10 @@ export default {
       default() {
         return {}
       }
+    },
+    background: {
+      type: Boolean,
+      default: false
     }
   },
   methods: {

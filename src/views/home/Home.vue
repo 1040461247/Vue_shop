@@ -3,7 +3,7 @@
       <!-- 头部区域 -->
       <el-header>
         <div class="header-left">
-          <img src="~assets/img/heima.png">
+          <img src="~assets/img/logo.png" class="titleLogo">
           <span>电商后台管理系统</span>
         </div>
         <el-button type="info" @click="logout">退出</el-button>
@@ -132,5 +132,9 @@ export default {
   font-size: 10px;
   line-height: 24px;
   cursor: pointer;
+}
+.titleLogo {
+  width: 50px;
+  margin-left: 20px;
 }
 </style>

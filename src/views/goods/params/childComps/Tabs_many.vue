@@ -1,6 +1,6 @@
 <template>
   <div class="dynamic">
-    <el-button @click="clickAdd" type="primary" :disabled="this.$store.state.goodsCascaderIsNull" class="addButton">添加参数</el-button>
+    <el-button @click="clickAdd" type="primary" :disabled="this.$store.goodsCascaderIsNull" class="addButton">添加参数</el-button>
     <!-- 表格区域 -->
     <el-table 
       :expand-row-keys="expands" 
@@ -155,6 +155,7 @@ export default {
         this.inputValue = ''
         this.$message.warning('添加失败：参数为空或参数重复！')
       } else {
+        if(rowData.attr_vals == '') rowData.attr_vals = rowData.attr_vals.split('') 
         rowData.attr_vals.push(this.inputValue.trim())
         this.inputValue = ''
         rowData.attr_NumVals = rowData.attr_vals

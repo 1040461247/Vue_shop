@@ -7,7 +7,7 @@
     <el-form :model="addData" :rules="rules" ref="addFormRef" label-width="100px" class="demo-ruleForm">
       <!-- Input -->
       <el-form-item label="分类名称：" prop="cat_name">
-        <el-input v-model="addData.cat_name"></el-input>
+        <el-input v-model="addData.cat_name" @keyup.enter.native="confirmAdd"></el-input>
       </el-form-item>
       <!-- Cascader -->
       <el-form-item label="父级分类：">

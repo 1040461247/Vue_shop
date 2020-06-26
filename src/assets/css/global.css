@@ -7,3 +7,13 @@ html, body, #app{
 }
 /* 解决Cascader高度问题 */
 .el-cascader-menu { height: 300px; }
+
+/* 解决Steps字体问题 */
+.el-step__title {
+  font-size: 13px;
+}
+
+/* 解决editor输入框高度问题 */
+.ql-editor {
+  min-height: 300px;
+}

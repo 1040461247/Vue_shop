@@ -1,6 +1,6 @@
 <template>
   <div class="static">
-    <el-button @click="clickAdd" type="primary" :disabled="isDisabled" class="addButton">添加属性</el-button>
+    <el-button @click="clickAdd" type="primary" :disabled="this.$store.goodsCascaderIsNull" class="addButton">添加属性</el-button>
     <!-- 表格区域 -->
     <el-table 
       :data="tableData" 
