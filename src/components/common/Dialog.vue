@@ -13,28 +13,16 @@
 
 <script>
 export default {
-  name: 'Dialog',
+  name: 'alertAddressDialog',
   props: {
-    title: {
-      type: String,
-      default: 'title无参数'
-    },
     isShow: {
       type: Boolean,
-      default: false
-    }
-  },
-  methods: {
-    handleCancle() {
-      this.$emit('handleCancle')
-    },
-    handleConfirm() {
-      this.$emit('handleConfirm')
+      default:false
     }
   }
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

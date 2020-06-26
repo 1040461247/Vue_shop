@@ -1,6 +1,6 @@
 <template>
   <el-breadcrumb separator-class="el-icon-arrow-right">
-    <el-breadcrumb-item :to="{ path: '/' }">{{home}}</el-breadcrumb-item>
+    <el-breadcrumb-item :to="{ path: '/welcome' }">{{home}}</el-breadcrumb-item>
     <el-breadcrumb-item v-for="item in tagArray" :key="item">{{item}}</el-breadcrumb-item>
   </el-breadcrumb>
 </template>
