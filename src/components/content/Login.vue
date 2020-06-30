@@ -39,8 +39,8 @@ export default {
     return {
       // 默认登陆账号
       loginForm: {
-        username: "admin",
-        password: "123456"
+        username: "",
+        password: ""
       },
       // 表单验证规则对象
       rules: {
