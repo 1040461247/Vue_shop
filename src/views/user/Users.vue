@@ -83,7 +83,7 @@
           <el-input v-model="addUserInfo.email"></el-input>
         </el-form-item>
         <el-form-item label="手机" prop="mobile">
-          <el-input v-model="addUserInfo.mobile" @change="addUser(true)"></el-input>
+          <el-input v-model="addUserInfo.mobile" @keyup.enter.native="addUser(true)"></el-input>
         </el-form-item>
       </el-form>
       <!-- 底部按钮 -->
@@ -100,10 +100,10 @@
           <el-input :disabled="true" :value="putUserData.username"></el-input>
         </el-form-item>
         <el-form-item label="邮箱" prop="email">
-          <el-input v-model="putUserData.email"></el-input>
+          <el-input v-model="putUserData.email" @keyup.enter.native="putUser(true)"></el-input>
         </el-form-item>
         <el-form-item label="手机" prop="mobile">
-          <el-input v-model="putUserData.mobile"></el-input>
+          <el-input v-model="putUserData.mobile" @keyup.enter.native="putUser(true)"></el-input>
         </el-form-item>
       </el-form>
       <!-- 底部按钮 -->

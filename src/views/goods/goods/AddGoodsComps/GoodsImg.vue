@@ -61,7 +61,7 @@ export default {
         this.pics.push(picInfo)
         this.$message.success('图片上传成功')
       } else {
-        console.log(res)
+        this.$messaged.error(res.meta.msg)
       }
     },
   },

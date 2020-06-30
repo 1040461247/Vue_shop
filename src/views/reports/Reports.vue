@@ -3,7 +3,7 @@
     <breadcrumb :home="'首页'" :tagArray="['数据统计', '数据报表']"/>
 
     <el-card>
-      <div id="main" style="width: 750px; height: 400px; ">
+      <div id="main" style="width: 1000px; height: 500px; ">
 
       </div>
     </el-card>
