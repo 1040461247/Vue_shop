@@ -9,7 +9,7 @@
       <el-form class="form" :model="loginForm" :rules="rules" ref="loginFormRef">
         <!-- 用户名 -->
         <el-form-item class="formInput" prop="username">
-          <el-input prefix-icon="iconfont icon-user" v-model="loginForm.username" placeholder="账户"></el-input>
+          <el-input prefix-icon="iconfont icon-user" v-model="loginForm.username" placeholder="账户" @keyup.enter.native="clickLogin"></el-input>
         </el-form-item>
         <!-- 密码 -->
         <el-form-item class="formInput" prop="password">
@@ -18,6 +18,7 @@
             v-model="loginForm.password"
             placeholder="密码"
             type="password"
+            @keyup.enter.native="clickLogin"
           ></el-input>
         </el-form-item>
         <!-- 按钮 -->
