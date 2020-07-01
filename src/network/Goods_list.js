@@ -70,7 +70,7 @@ export function addGoods({ goods_name, goods_cat, goods_price, goods_number, goo
 }
 
 // 修改商品信息
-export function alGoods({ goods_id, goods_name, goods_price, goods_number, goods_weight, goods_introduce, attrs }, pics) {
+export function alGoods({ goods_id, goods_name, goods_price, goods_number, goods_weight, goods_introduce, attrs }, pics, goods_cat) {
   return request({
     url: 'goods/' + goods_id,
     method: 'put',
@@ -81,7 +81,8 @@ export function alGoods({ goods_id, goods_name, goods_price, goods_number, goods
       goods_weight,
       goods_introduce,
       pics,
-      attrs
+      attrs,
+      goods_cat
     }
   })
 }
