@@ -66,7 +66,7 @@ export default {
       // 预校验表单内容
       this.$refs.loginFormRef.validate(valid => {
         // 当表单内容错误时，结束该方法
-        if (!valid) return;
+        if (!valid) return this.$message.warning('请完善表单内容');
         // 当表单内容正确时，进行登陆验证
         Login(this.loginForm).then(res => {
           if (res.meta.status == 200) {
@@ -81,7 +81,7 @@ export default {
             this.$router.push("/home");
           } else {
             this.$message({
-              message: "账号、密码有误！",
+              message: "账号或密码有误！",
               type: "error"
             });
             console.log(res);
