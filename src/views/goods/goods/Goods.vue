@@ -88,6 +88,7 @@ export default {
       })
     }
   },
+  // 进入页面时会执行的函数,请求所有商品数据
   created() {
     this._getGoodsList()
   }
