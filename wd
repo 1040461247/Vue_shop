@@ -1,0 +1,42 @@
+[33me79c780[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m HEAD@{0}: commit: My second commit, modify good.txt
+[33me78624c[m HEAD@{1}: commit: 第一次git仓库本地提交的描述文件
+[33m9a189bd[m[33m ([m[1;31morigin/master[m[33m)[m HEAD@{2}: commit: 更改了接口url
+[33m7759e93[m HEAD@{3}: commit: 完善了login页面的部分功能
+[33m6c63480[m HEAD@{4}: commit: 完善部分样式
+[33m5b4678d[m HEAD@{5}: commit: 完善了登录界面部分功能
+[33m9d7b163[m HEAD@{6}: commit: 取消了login界面账号密码的绑定
+[33mc87bc3a[m HEAD@{7}: commit: 完成了首页功能的开发
+[33mfd2182c[m[33m ([m[1;31morigin/report[m[33m, [m[1;32mreport[m[33m)[m HEAD@{8}: merge report: Fast-forward
+[33m3d41dc8[m[33m ([m[1;31morigin/order[m[33m, [m[1;32morder[m[33m)[m HEAD@{9}: checkout: moving from report to master
+[33mfd2182c[m[33m ([m[1;31morigin/report[m[33m, [m[1;32mreport[m[33m)[m HEAD@{10}: commit: 完成了报表功能的开发
+[33m3d41dc8[m[33m ([m[1;31morigin/order[m[33m, [m[1;32morder[m[33m)[m HEAD@{11}: checkout: moving from master to report
+[33m3d41dc8[m[33m ([m[1;31morigin/order[m[33m, [m[1;32morder[m[33m)[m HEAD@{12}: merge order: Fast-forward
+[33m9b57a4f[m[33m ([m[1;31morigin/goods_list[m[33m, [m[1;32mgoods_list[m[33m)[m HEAD@{13}: checkout: moving from order to master
+[33m3d41dc8[m[33m ([m[1;31morigin/order[m[33m, [m[1;32morder[m[33m)[m HEAD@{14}: commit: 完成订单功能开发
+[33m9b57a4f[m[33m ([m[1;31morigin/goods_list[m[33m, [m[1;32mgoods_list[m[33m)[m HEAD@{15}: checkout: moving from master to order
+[33m9b57a4f[m[33m ([m[1;31morigin/goods_list[m[33m, [m[1;32mgoods_list[m[33m)[m HEAD@{16}: merge goods_list: Fast-forward
+[33m0b3e04c[m[33m ([m[1;31morigin/goods_params[m[33m, [m[1;32mgoods_params[m[33m)[m HEAD@{17}: checkout: moving from goods_list to master
+[33m9b57a4f[m[33m ([m[1;31morigin/goods_list[m[33m, [m[1;32mgoods_list[m[33m)[m HEAD@{18}: commit: 完成了商品功能开发
+[33m0b3e04c[m[33m ([m[1;31morigin/goods_params[m[33m, [m[1;32mgoods_params[m[33m)[m HEAD@{19}: checkout: moving from master to goods_list
+[33m0b3e04c[m[33m ([m[1;31morigin/goods_params[m[33m, [m[1;32mgoods_params[m[33m)[m HEAD@{20}: merge goods_params: Fast-forward
+[33m26295c6[m[33m ([m[1;31morigin/goods_cate[m[33m, [m[1;32mgoods_cate[m[33m)[m HEAD@{21}: checkout: moving from goods_params to master
+[33m0b3e04c[m[33m ([m[1;31morigin/goods_params[m[33m, [m[1;32mgoods_params[m[33m)[m HEAD@{22}: commit: 完成了分类参数的开发
+[33m26295c6[m[33m ([m[1;31morigin/goods_cate[m[33m, [m[1;32mgoods_cate[m[33m)[m HEAD@{23}: checkout: moving from master to goods_params
+[33m26295c6[m[33m ([m[1;31morigin/goods_cate[m[33m, [m[1;32mgoods_cate[m[33m)[m HEAD@{24}: merge goods_cate: Fast-forward
+[33m371d5bf[m[33m ([m[1;31morigin/rights[m[33m, [m[1;32mrights[m[33m)[m HEAD@{25}: checkout: moving from goods_cate to master
+[33m26295c6[m[33m ([m[1;31morigin/goods_cate[m[33m, [m[1;32mgoods_cate[m[33m)[m HEAD@{26}: commit: 完成了分类功能的开发
+[33m371d5bf[m[33m ([m[1;31morigin/rights[m[33m, [m[1;32mrights[m[33m)[m HEAD@{27}: checkout: moving from master to goods_cate
+[33m371d5bf[m[33m ([m[1;31morigin/rights[m[33m, [m[1;32mrights[m[33m)[m HEAD@{28}: merge rights: Fast-forward
+[33me92cbad[m[33m ([m[1;31morigin/user[m[33m, [m[1;32muser[m[33m)[m HEAD@{29}: checkout: moving from rights to master
+[33m371d5bf[m[33m ([m[1;31morigin/rights[m[33m, [m[1;32mrights[m[33m)[m HEAD@{30}: commit: 完成了权限功能的开发
+[33me92cbad[m[33m ([m[1;31morigin/user[m[33m, [m[1;32muser[m[33m)[m HEAD@{31}: checkout: moving from master to rights
+[33me92cbad[m[33m ([m[1;31morigin/user[m[33m, [m[1;32muser[m[33m)[m HEAD@{32}: merge user: Fast-forward
+[33ma449ea8[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{33}: checkout: moving from user to master
+[33me92cbad[m[33m ([m[1;31morigin/user[m[33m, [m[1;32muser[m[33m)[m HEAD@{34}: commit: 完成用户列表功能的开发
+[33ma449ea8[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{35}: checkout: moving from login to user
+[33ma449ea8[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{36}: checkout: moving from master to login
+[33ma449ea8[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{37}: merge login: Fast-forward
+[33mda23f99[m HEAD@{38}: checkout: moving from login to master
+[33ma449ea8[m[33m ([m[1;31morigin/login[m[33m, [m[1;32mlogin[m[33m)[m HEAD@{39}: commit: 完成了登录功能
+[33mda23f99[m HEAD@{40}: checkout: moving from master to login
+[33mda23f99[m HEAD@{41}: commit (initial): add files
