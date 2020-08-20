@@ -1,0 +1,10 @@
+total 702
+-rw-r--r-- 1 10404 197609    481  6月 27 12:28 babel.config.js
+drwxr-xr-x 1 10404 197609      0  8月 20 14:28 dist/
+drwxr-xr-x 1 10404 197609      0  8月 20 14:30 node_modules/
+-rw-r--r-- 1 10404 197609   1305  6月 27 12:20 package.json
+-rw-r--r-- 1 10404 197609 507879  6月 27 12:20 package-lock.json
+drwxr-xr-x 1 10404 197609      0  8月 20 14:30 public/
+-rw-r--r-- 1 10404 197609    320  6月  4 14:00 README.md
+drwxr-xr-x 1 10404 197609      0  8月 20 14:30 src/
+-rw-r--r-- 1 10404 197609   1316  6月 27 13:36 vue.config.js
